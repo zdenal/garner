@@ -21,7 +21,7 @@ module Garner
             return unless binding.respond_to?(:updated_at) && binding.updated_at
 
             # Check for ActiveModel cache key format
-            return unless binding.cache_key =~ VALID_FORMAT
+            # return unless binding.cache_key =~ VALID_FORMAT
 
             decimal_portion = binding.updated_at.utc.to_f % 1
             decimal_string = format('%.10f', decimal_portion).gsub(/^0/, '')

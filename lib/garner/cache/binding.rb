@@ -4,6 +4,8 @@ Garner.config.option(:binding_key_strategy, default: Garner::Strategies::Binding
 Garner.config.option(:binding_invalidation_strategy, default: Garner::Strategies::Binding::Invalidation::Touch)
 Garner.config.option(:mongoid_identity_fields, default: [:_id])
 Garner.config.option(:invalidate_mongoid_root, default: true)
+Garner.config.option(:active_record_identity_fields, default: [:_id])
+Garner.config.option(:invalidate_active_record_root, default: true)
 
 module Garner
   module Cache
