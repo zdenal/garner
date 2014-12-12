@@ -31,7 +31,7 @@ module Garner
         # @return [Mongoid::Document]
         def proxy_binding
           return nil unless handle
-          @proxy_binding ||= klass.where(conditions).only(:_id, :_type, :updated_at).limit(1).entries.first
+          @proxy_binding ||= klass.where(conditions).limit(1).first
         end
 
         # Stringize this identity for purposes of marshaling.

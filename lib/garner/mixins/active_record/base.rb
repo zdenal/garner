@@ -76,7 +76,7 @@ module Garner
             # Only find the latest if we can order by :updated_at
             # return nil unless fields['updated_at']
             return nil unless attribute_names.include? 'updated_at'
-            order(updated_at: :desc).select(:updated_at).first
+            order(updated_at: :desc).first
           end
 
           def _invalidate
